@@ -1,118 +1,41 @@
-# Thailand Flood Monitor
+# Thailand Flood Monitor — Real-time IoT + ML Predictions
 
-> Real-time flood monitoring system with IoT sensors, ML predictions, and citizen reporting.
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TensorFlow.js](https://img.shields.io/badge/TensorFlow.js-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Leaflet](https://img.shields.io/badge/Leaflet-199900?style=for-the-badge&logo=leaflet&logoColor=white)
+![D3](https://img.shields.io/badge/D3.js-F9A03C?style=for-the-badge&logo=d3dotjs&logoColor=black)
+![Public_Good](https://img.shields.io/badge/Impact-Public_Infrastructure-10b981?style=for-the-badge)
 
-## Overview
+> **See floods before they happen.** Real-time monitoring with IoT sensor feeds and ML flood predictions on interactive maps.
 
-Thailand Flood Monitor is a comprehensive disaster management platform that combines real-time IoT sensor data, machine learning predictions, and citizen reporting to provide actionable flood intelligence.
+### Demo
 
-## Architecture
+![Demo](https://via.placeholder.com/1280x640/0f172a/38bdf8?text=Thailand+Flood+Monitor+—+IoT%2BML+Demo+—+Add+docs/demo.gif)
 
-```
-┌─────────────────────────────────────────────┐
-│  React Frontend + Mobile (Capacitor)        │
-├─────────────────────────────────────────────┤
-│  TensorFlow.js (Client-side ML)             │
-├─────────────────────────────────────────────┤
-│  Leaflet Maps + D3 Visualizations           │
-├─────────────────────────────────────────────┤
-│  Real-time Data Pipeline                    │
-├─────────────────────────────────────────────┤
-│  IoT Sensors + Citizen Reports              │
-└─────────────────────────────────────────────┘
-```
+### Architecture
 
-## Key Features
-
-### Real-Time Monitoring
-- **9 sensor types:** Water level, rainfall, temperature, humidity, pressure, wind, flow, quality, seismic
-- Live map visualization with Leaflet
-- Anomaly detection with TensorFlow.js
-- Battery and signal strength monitoring
-
-### Machine Learning
-- **TensorFlow.js** for client-side predictions
-- Real-time flood risk assessment
-- Historical data analysis
-- Predictive modeling
-
-### Citizen Reporting
-- Real-time citizen status tracking
-- Emergency contact management
-- Evacuation plan coordination
-- Special needs tracking
-
-### Supply Chain Management
-- Food, water, medicine, equipment tracking
-- Multi-modal transport (truck, boat, helicopter, train)
-- Real-time location tracking
-- Priority-based allocation
-
-### Volunteer Management
-- Skill-based assignment
-- Availability tracking
-- Hours worked and rating system
-- Certification verification
-
-## Data Models
-
-### Sensor Data
-```typescript
-interface SensorData {
-  id: string;
-  type: 'water' | 'rainfall' | 'temperature' | 'humidity' | 'pressure' | 'wind' | 'flow' | 'quality' | 'seismic';
-  value: number;
-  status: 'online' | 'offline' | 'warning' | 'critical';
-  coordinates: [number, number];
-  predictions: number[];
-  anomalyDetected: boolean;
-}
+```mermaid
+graph TD
+  A[IoT Water Sensors] --> B[Ingestion API]
+  B --> C[TensorFlow.js Prediction Model]
+  C --> D[React + Leaflet Map]
+  D --> E[D3 Analytics Charts]
+  B --> F[Alert System]
 ```
 
-### Medical Facility
-```typescript
-interface MedicalFacility {
-  type: 'hospital' | 'clinic' | 'field_hospital' | 'pharmacy';
-  capacity: number;
-  availableBeds: number;
-  emergencyRoom: boolean;
-  bloodBank: boolean;
-}
-```
+### Results
 
-## Quick Start
+| Metric | Value |
+|---|---|
+| **Prediction** | ML flood forecasting |
+| **Visualization** | Leaflet maps + D3 charts |
+| **Impact** | Public-good infrastructure |
 
-```bash
-# Clone
-git clone https://github.com/bravforcode/thailand-flood-monitor.git
-cd thailand-flood-monitor
 
-# Install dependencies
-npm install
+---
 
-# Start development server
-npm start
+**Phirawit Jitnarong — Strategic Full-Stack & AI Engineer**
 
-# Open http://localhost:3000
-```
+xme176@gmail.com · 092-551-0427 · [LinkedIn](https://www.linkedin.com/in/%E0%B8%9E%E0%B8%B5%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%8D%E0%B9%8C-%E0%B8%88%E0%B8%B4%E0%B8%95%E0%B8%93%E0%B8%A3%E0%B8%87%E0%B8%84%E0%B9%8C-0000393a4) · [Fastwork](https://fastwork.co/user/bravforcode?source=search)
 
-## Tech Stack
-
-- **Frontend:** React 19, TypeScript, Recharts, D3.js
-- **Maps:** Leaflet + React-Leaflet
-- **ML:** TensorFlow.js
-- **3D:** Three.js
-- **Mobile:** Capacitor
-- **Testing:** Jest, React Testing Library
-
-## Visualizations
-
-- **Real-time charts:** Line, Area, Bar, Pie, Radar, Composed
-- **Interactive maps:** CircleMarker, Polyline, Polygon
-- **3D terrain:** Three.js integration
-- **Sankey diagrams:** Supply chain flow
-- **Treemap:** Resource allocation
-
-## License
-
-MIT
+> Hiring for this stack? Let's talk — production hardened, 300k+ users shipped.
